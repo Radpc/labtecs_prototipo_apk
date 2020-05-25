@@ -1,0 +1,94 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "0882f0edef2c5a57825a5e1b81661953",
+    "entities": [
+      {
+        "tableName": "paciente",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `cpf` TEXT, `nome` TEXT, `senteDor` INTEGER, `dorIntensidade` INTEGER, `desconforto` INTEGER, `desconfortoLocal` TEXT, `teveCirurgia` INTEGER, `quandoCirurgia` TEXT, `tipoCirurgia` TEXT, `dorPosCirurgia` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cpf",
+            "columnName": "cpf",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "senteDor",
+            "columnName": "senteDor",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dorIntensidade",
+            "columnName": "dorIntensidade",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "desconforto",
+            "columnName": "desconforto",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "desconfortoLocal",
+            "columnName": "desconfortoLocal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "teveCirurgia",
+            "columnName": "teveCirurgia",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quandoCirurgia",
+            "columnName": "quandoCirurgia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipoCirurgia",
+            "columnName": "tipoCirurgia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dorPosCirurgia",
+            "columnName": "dorPosCirurgia",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0882f0edef2c5a57825a5e1b81661953')"
+    ]
+  }
+}
